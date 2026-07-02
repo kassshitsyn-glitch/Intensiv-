@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Страница не найдена</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>body{font-family:-apple-system,Segoe UI,Roboto,sans-serif;display:flex;min-height:100vh;align-items:center;justify-content:center;text-align:center;padding:20px}a{color:#e74c3c}</style>
+<script>
+(function(){
+  var target='/klienty/';
+  // редиректим только один раз и только если мы НЕ на целевой странице
+  if (location.pathname.indexOf('/klienty') !== 0 && !sessionStorage.getItem('r404')) {
+    sessionStorage.setItem('r404','1');
+    location.replace(target);
+  }
+})();
+</script>
+</head>
+<body>
+<div>
+<h1>Страница не найдена</h1>
+<p>Возможно, сайт ещё обновляется — попробуй через минуту.</p>
+<p><a href="/klienty/">Открыть страницу интенсива →</a></p>
+</div>
+</body>
+</html>
